@@ -1,0 +1,124 @@
+
+.health-modules {
+  padding: 25px;
+  color: #1f2937;
+}
+
+.health-modules h1 {
+  margin-bottom: 8px;
+}
+
+.health-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.health-tab {
+  padding: 12px 20px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.health-tab.active {
+  background: #15803d;
+  color: white;
+  border-color: #15803d;
+}
+
+.health-panel {
+  background: white;
+  padding: 22px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.health-panel h2 {
+  margin-top: 0;
+  color: #166534;
+}
+
+.health-panel label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+.health-panel input,
+.health-panel select,
+.health-panel textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  margin-bottom: 8px;
+}
+
+.health-panel textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.health-panel button,
+.worker-form button {
+  margin-top: 12px;
+  padding: 11px 18px;
+  background: #15803d;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.health-panel button:hover,
+.worker-form button:hover {
+  background: #166534;
+}
+
+.history-item,
+.worker-card {
+  padding: 15px;
+  margin: 12px 0;
+  background: #f0fdf4;
+  border-radius: 8px;
+}
+
+.worker-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.worker-card p {
+  margin: 5px 0;
+}
+
+.worker-delete {
+  background: #dc2626 !important;
+  flex-shrink: 0;
+}
+
+.health-message {
+  padding: 12px;
+  background: #dcfce7;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .health-modules {
+    padding: 12px;
+  }
+
+  .worker-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

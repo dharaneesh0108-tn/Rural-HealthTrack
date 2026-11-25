@@ -1,0 +1,91 @@
+
+.field-page {
+  padding: 25px;
+  color: #1f2937;
+}
+
+.field-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.field-stats > div,
+.field-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.field-stats strong {
+  font-size: 28px;
+  color: #15803d;
+}
+
+.field-panel {
+  margin: 20px 0;
+}
+
+.field-panel h2 {
+  color: #166534;
+}
+
+.field-panel label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+.field-panel input,
+.field-panel select,
+.field-panel textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  margin-bottom: 8px;
+}
+
+.field-panel textarea {
+  min-height: 90px;
+}
+
+.field-panel button {
+  padding: 11px 18px;
+  background: #15803d;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.field-card {
+  padding: 16px;
+  margin: 12px 0;
+  background: #f0fdf4;
+  border-radius: 8px;
+}
+
+.field-card h3 {
+  margin-top: 0;
+}
+
+.field-card span {
+  color: #166534;
+  font-weight: 600;
+}
+
+.field-message {
+  padding: 12px;
+  background: #dcfce7;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .field-page {
+    padding: 12px;
+  }
+}
