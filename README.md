@@ -1,75 +1,44 @@
-# React + TypeScript + Vite
+# Rural HealthTrack
+### Rural Healthcare Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rural HealthTrack is an offline-first healthcare management web application designed to organize and simplify basic healthcare activities in rural communities.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dashboard:** Overview of healthcare activities and statistics.
+- **Patient Management:** Register and manage patient information.
+- **Appointment Management:** Schedule and track appointments.
+- **Medical Records:** Maintain medical records and vital information.
+- **Health Worker Management:** Manage health worker details.
+- **Medicine Inventory:** Track medicine stock, expiry dates and low-stock items.
+- **Field Visit Tracking:** Record field visits and follow-up activities.
+- **Referral Management:** Manage patient referrals and their status.
+- **Reports & Analytics:** View summaries and statistics.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- TypeScript
+- Vite
+- Dexie.js
+- IndexedDB
+- CSS
 
-## Expanding the ESLint configuration
+## Data Storage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The current prototype uses IndexedDB through Dexie.js to store application data locally in the browser. Cloud synchronization is not yet implemented.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Status
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Functional local prototype developed for educational and demonstration purposes. Use fictional data for demonstrations.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Future Improvements
 
-```
+- Cloud database integration
+- Secure authentication and role-based access
+- Data backup and synchronization
+- Improved reporting and data export
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+This project is licensed under the MIT License.
